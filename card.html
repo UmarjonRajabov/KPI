@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="rasm">
+            <img src="images/odam.jfif" alt="Inson rasmi">
+        </div>
+        <div class="info">
+            <h1>Mo'sinov Xusan Shuxratovich</h1>
+            <div class="info_item">
+                <p>Филиал /Го</p>
+                <p>Главное управление по г.Ташкент</p>
+            </div>
+            <div class="info_item">
+                <p>ВСП (ОПЕРУ/БХМ/БХО)</p>
+                <p>Академик филиали                </p>
+            </div>
+            <div class="info_item">
+                <p>ПОДРАЗДЕЛЕНИЕ</p>
+                <p>Отдел обслуживания и выпуска пластиковых карточек</p>
+            </div>
+            <div class="info_item">
+                <p>ДОЛЖНОСТЬ</p>
+                <p>Главный специалист </p>
+            </div>
+            <div class="info_item">
+                <p>ТАБЕЛЬНЫЙ НОМЕР РАБОТНИКА</p>
+                <p>2552</p>
+            </div>
+            <div class="info_item">
+                <p>ПИНФЛ РАБОТНИКА</p>
+                <p>32525018332557               </p>
+            </div>
+            <div class="info_item">
+                <p>ОКЛАД РАБОТНИКА, СУМ</p>
+                <p>1 500 000,00</p>
+            </div>
+        </div>
+        <div class="diagram">
+            <h1>KPI</h1>
+            <p style="float: right; padding-top: 1px;">за июль 2023 г.            </p>
+            <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+
+<script>
+const xValues = ["Italy", "France", "Spain", "USA"];
+const yValues = [55, 49, 44, 24, 15];
+const barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart1", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+</script>
+
+        </div>
+    </div>
+
+    <div class="graph-chart">
+        <p>Динамика выполнение общего плановые показателей KPI</p>
+        <canvas id="myChart" style="width:100%;max-width:2900px"></canvas>
+        <script>
+            const xValues1 = [50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210];
+            const yValues1 = [8,8,8,8,9,9,9,10,10,11,12,12,13,14,14,15,15];
+            
+            new Chart("myChart", {
+              type: "line",
+              data: {
+                labels: xValues1,
+                datasets: [{
+                  fill: false,
+                  lineTension: 0,
+                  backgroundColor: "rgba(0,0,255,1.0)",
+                  borderColor: "rgba(0,0,255,0.1)",
+                  data: yValues1
+                }]
+              },
+              options: {
+                legend: {display: false},
+                scales: {
+                  yAxes: [{ticks: {min: 7, max:15}}],
+                }
+              }
+            });
+            </script> 
+
+    </div>
+
+    <div class="flex-container">
+        <div id="title">Чистая прибыль НБУ области/филиала/ЦБУ (после налогов), млн.сум</div>
+        <div id="plan">500</div>
+        <div id="fact">487</div>  
+        <div id="done">97%</div>
+        <div id="pos">500</div>
+        <div id="prem">500</div>   
+    </div>
+
+    
+    <div class="flex-container">
+        <div id="title">Объём кредитного портфеля НБУ, млн.сум</div>
+        <div id="plan">1000</div>
+        <div id="fact">825</div>  
+        <div id="done">82%</div>
+        <div id="pos">1000</div>
+        <div id="prem">1000</div>   
+    </div>
+
+    
+    <div class="flex-container">
+        <div id="title">ЧПД+ЧНД по области/филиала/ЦБУ, шт</div>
+        <div id="plan">2500</div>
+        <div id="fact">2700</div>  
+        <div id="done">105%</div>
+        <div id="pos">2500</div>
+        <div id="prem">2500</div>   
+    </div>
+
+    
+    <div class="flex-container">
+        <div id="title">Объём выданных кредитов ФЛ за отчетный период, %        </div>
+        <div id="plan">100</div>
+        <div id="fact">97</div>  
+        <div id="done">97%</div>
+        <div id="pos">11500</div>
+        <div id="prem">11500</div>   
+    </div>
+
+    
+    <div class="flex-container">
+        <div id="title">Milly, QR, Эл.коммерция (взвешенный показатель выполнения плана),</div>
+        <div id="plan">750</div>
+        <div id="fact">950</div>  
+        <div id="done">125%</div>
+        <div id="pos">750</div>
+        <div id="prem">750</div>   
+    </div>
+
+
+</body>
+</html>
